@@ -49,8 +49,7 @@ g++ -o client client.cpp sockutil.cpp -lpthread -lncurses
 ## 🤝 Contributing
 Contributions are welcome! Feel free to fork this project and submit a PR with your improvements.
 
-## 📜 License
-This project is licensed under the MIT License.
+
 
 ---
 💡 Built with passion for high-performance computing and real-time communication!
