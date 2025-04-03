@@ -1,55 +1,53 @@
 # High-Performance Multi-Threaded Chat Server with ncurses UI
 
-## 🚀 Introduction
-This project is a high-performance, multi-threaded chat server implemented in C++. It features an intuitive **ncurses-based UI**, making terminal-based chatting more interactive. The server is designed for **low-latency** communication and supports multiple clients efficiently.
+A highly optimized, low-latency multi-threaded chat server built in C++ with `ncurses` for a rich terminal-based UI. This project demonstrates efficient networking, multi-threading, and real-time communication.
 
-## 🔥 Features
-- **Multi-threaded architecture** for handling multiple clients concurrently
-- **ncurses UI** for an improved terminal chat experience
-- **Low-latency message transmission** for real-time chatting
-- **Client-server model** with TCP socket programming
-- **Signal handling** for safe termination
-- **Efficient synchronization** using mutexes
+## Features
 
-## 🛠️ Installation & Setup
-### Prerequisites
-- C++ compiler (g++)
-- ncurses library
-- Git (for cloning)
+- **Multi-threaded Server:** Handles multiple clients concurrently with threading.
+- **Efficient Networking:** Uses socket programming for real-time message exchange.
+- **Ncurses UI:** Provides an interactive chat interface in the terminal.
+- **Low Latency Optimizations:** Designed to minimize message delay.
+- **Graceful Exit Handling:** Catches signals and closes sockets safely.
+- **Customizable Colors & UI Elements.**
 
-### Steps
+## Screenshot
+
+![Chat Server Example](Screenshot%202025-04-03%20215233.png)
+
+## Installation & Usage
+
+### 1. Clone the Repository
 ```sh
-# Clone the repository
 git clone https://github.com/PrnvCodr/High-Performance-Multi-Threaded-Chat-Server-with-ncurses-UI.git
 cd High-Performance-Multi-Threaded-Chat-Server-with-ncurses-UI
+```
 
-# Compile the server and client
-g++ -o server server.cpp sockutil.cpp -lpthread -lncurses
-g++ -o client client.cpp sockutil.cpp -lpthread -lncurses
+### 2. Compile the Project
+```sh
+g++ server.cpp sockutil.cpp -o server -lpthread
 
-# Run the server
+# Compile client with ncurses
+g++ client.cpp sockutil.cpp -o client -lpthread -lncurses
+```
+
+### 3. Run the Server
+```sh
 ./server 8080
+```
 
-# Run the client
+### 4. Run the Client
+```sh
 ./client 127.0.0.1 8080
 ```
 
-## 🖥️ Usage
-1. Start the server on a designated port.
-2. Clients can connect using the server IP and port.
-3. Enjoy real-time chat with multiple users in a **low-latency** environment.
+## Future Improvements
+- Convert this project into a **web-based chat app** using WebSockets.
+- Implement **even lower latency** optimizations for ultra-fast messaging.
+- Add **encryption** for secure communication.
+- Support for **file sharing** between clients.
 
-## 🔧 Optimizations & Future Plans
-- **Further latency reduction** through advanced network optimizations.
-- **Web-based UI** for a more modern chatting experience.
-- **Integration with WebSockets** for real-time messaging.
-- **Load balancing** for scalability.
-- **Database integration** for chat history persistence.
-
-## 🤝 Contributing
-Contributions are welcome! Feel free to fork this project and submit a PR with your improvements.
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
 
-
----
-💡 Built with passion for high-performance computing and real-time communication!
